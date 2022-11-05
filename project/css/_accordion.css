@@ -1,0 +1,211 @@
+.accordion__items:first-child .accordion__heading {
+  border-top: 1px solid var(--light-middle-gray);
+}
+
+.accordion__heading {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: -1px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid var(--light-middle-gray);
+  border-right: none;
+  border-left: none;
+  padding: 41px 120px 41px 0;
+  font-size: 24px;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: color var(--short), border-color var(--short);
+}
+
+.accordion__items:first-child .accordion__heading:hover,
+.accordion__heading:hover {
+  border-color: var(--violet);
+}
+
+.accordion__items:first-child .accordion__heading:active,
+.accordion__heading:active,
+.is-active.accordion__items:first-child .accordion__heading,
+.is-active.accordion__items .accordion__heading {
+  border-color: var(--light-middle-gray);
+}
+
+.accordion__heading-text {
+  position: relative;
+}
+
+.accordion__heading-text-wrap {
+  position: relative;
+  z-index: 1;
+  font-weight: var(--semibold);
+  font-size: 24px;
+  line-height: var(--default-lh);
+}
+
+.accordion__heading-text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 8px);
+  height: 100%;
+  transform: translate(-50%, -50%) scaleX(0);
+  background-color: var(--violet);
+  transition: transform var(--short) ease;
+}
+
+.accordion__heading:hover {
+  color: var(--violet);
+}
+
+.accordion__heading:active {
+  color: var(--dark-violet);
+}
+
+.accordion__heading:focus:not(:active) {
+  color: var(--white);
+  outline: none;
+}
+
+.accordion__heading:focus:not(:active) .accordion__heading-text::before {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
+.head-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  transform: translateY(-50%) rotate(-180deg);
+  transition: background-color var(--short), var(--short-6) ease, transform var(--short), var(--short-6) ease;
+}
+
+.head-icon-round {
+  transition: fill 0.5s ease, stroke 0.5s ease;
+}
+
+.accordion__heading:hover .head-icon-round,
+.accordion__heading:focus .head-icon-round {
+  fill: var(--violet-ultra-light);
+  stroke: var(--violet-ultra-light);
+}
+
+.accordion__heading:hover .head-icon::before,
+.accordion__heading:hover .head-icon::after,
+.accordion__heading:focus .head-icon::before,
+.accordion__heading:focus .head-icon::after {
+  background-color: var(--white);
+}
+
+.is-active .head-icon {
+  transform: translateY(-50%) rotate(0);
+}
+
+.is-active .accordion__heading .head-icon-round {
+  fill: var(--violet-ultra-light);
+  stroke: var(--violet);
+}
+
+.accordion__content {
+  overflow: hidden;
+  visibility: hidden;
+  margin-top: -1px;
+  border-bottom: 1px solid transparent;
+}
+
+.is-active .accordion__content {
+  visibility: visible;
+  border-color: var(--dark-violet);
+}
+
+.accordion__content-wrap {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.accordion__inner-list {
+  width: 91%;
+  column-count: 3;
+}
+
+.accordion__painter-link.active {
+  color: var(--violet-dark);
+}
+
+.accordion__plug-wrap {
+  display: flex;
+  justify-content: space-between;
+  max-width: 574px;
+}
+
+.accordion__plug-square {
+  position: relative;
+  width: 50%;
+}
+
+.accordion__plug-square::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: calc(100% - 26px);
+  box-sizing: border-box;
+  border: 2px solid var(--border-gray);
+  background-color: var(--dark-grey-5);
+}
+
+.accordion__plug-content {
+  width: 50%;
+  padding: 41px 0 40px 24px;
+}
+
+@media (max-width: 1280px) {
+
+  .accordion__inner-list {
+    width: 116%;
+    column-count: 2;
+  }
+
+}
+
+@media (max-width: 970px) {
+
+  .accordion__inner-list {
+    width: 111%;
+    column-count: 3;
+  }
+
+}
+
+@media (max-width: 610px) {
+
+  .accordion__inner-list {
+    width: 111%;
+    column-count: 1;
+  }
+
+  .accordion__heading {
+    padding: 21px 64px 21px 0;
+  }
+
+  .accordion__content-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .accordion__heading-text-wrap {
+    font-size: 18px;
+  }
+
+  .head-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  
+
+}

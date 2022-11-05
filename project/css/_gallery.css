@@ -1,0 +1,234 @@
+.gallery {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: var(--white);
+  background-color: var(--background-helper);
+  background-image: url('../img/gallery-background@1920.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery__content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery__left-content {
+  display: flex;
+  flex-direction: column;
+  width: calc(400 / 1600 * 100%);
+  color: var(--white);
+}
+
+.gallery__filter-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: var(--semibold);
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.gallery__input-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 152px;
+  margin-top: auto;
+}
+
+
+
+.gallery__slider-nav {
+  width: calc(1150 / 1600 * 100%);
+  margin-right: 0;
+  padding-top: 18px;
+}
+
+.gallery__navigation {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+
+
+.gallery__prev {
+  margin-right: 20px;
+}
+
+.gallery__pagination {
+  margin-right: 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+.gallery__slides-container {
+  overflow: hidden;
+}
+
+.gallery__slide {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-helper);
+}
+
+.gallery__slide::before {
+  content: "";
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding-top: calc(100% - 6px);
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  transition: background-color var(--short), border-color var(--short);
+}
+
+.gallery__slide:focus {
+  outline: none;
+}
+
+.gallery__slide:focus::before {
+  border: 3px solid var(--dark-violet);
+}
+
+.gallery__slide:active::before {
+  background-color: var(--transparent-rose);
+}
+
+.gallery__slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 20px 25px 30px;
+  box-sizing: border-box;
+  opacity: 0;
+  background-color: var(--dark-grey-5);
+  background-image: url('../img/gallery-lupa.svg');
+  background-repeat: no-repeat;
+  background-position: center 45%;
+  background-clip: content-box;
+  transition: opacity var(--middle);
+}
+
+.gallery__slide:hover::after {
+  opacity: 1;
+}
+
+.gallery__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1280px) {
+
+  .gallery {
+    background-image: url('../img/gallery-background@1024.jpg');
+  }
+
+  .gallery__left-content {
+    width: calc(280 / 924 * 100%);
+  }
+
+  .gallery__slider-nav {
+    width: calc(595 / 924 * 100%);
+  }
+
+  .gallery__slide::before {
+    padding-top: calc(112% - 6px);
+  }
+
+  .gallery__filter {
+    margin-bottom: 101px;
+  }
+
+  .gallery__input-wrap {
+    margin-top: 0;
+  }
+
+  .century__visible-checkbox {
+    top: 0;
+  }
+
+}
+
+@media (max-width: 970px) {
+
+  .gallery {
+    background-image: url('../img/gallery-background@768.jpg');
+  }
+
+  .gallery__content-wrapper {
+    flex-direction: column;
+  }
+
+  .gallery__left-content,
+  .gallery__slider-nav {
+    width: 100%;
+  }
+
+  .gallery__slider-nav {
+    padding-top: 35px;
+  }
+
+  .gallery__filter {
+    position: relative;
+    z-index: 11;
+    max-width: 280px;
+    margin-bottom: 34px;
+  }
+
+  .gallery__slide::before {
+    padding-top: calc(104% - 6px);
+  }
+
+}
+
+@media (max-width: 610px) {
+
+  .gallery {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url('../img/gallery-background@320.jpg');
+  }
+
+  .gallery__filter {
+    max-width: 100%;
+    margin-bottom: 26px;
+  }
+
+  .gallery__filter-title {
+    margin-bottom: 4px;
+  }
+
+  .gallery__slides-container {
+    margin-bottom: 19px;
+  }
+
+  .gallery__slider-nav {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 30px;
+  }
+
+  .gallery__navigation {
+    align-self: center;
+  }
+
+  .gallery__slide::before {
+    padding-top: calc(127% - 6px);
+  }
+
+
+
+}

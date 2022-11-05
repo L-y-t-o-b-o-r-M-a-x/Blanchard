@@ -1,0 +1,131 @@
+.catalog {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.catalog__text {
+  width: calc(1080 / 1600 * 100%);
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.catalog__content-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__info-painter-wrap {
+  width: calc(750 / 1600 * 100%);
+}
+
+.catalog__info-painter {
+  display: none;
+}
+
+.catalog__info-painter.active {
+  display: block;
+  animation-name: fade-in;
+  animation-duration: var(--middle);
+}
+
+.catalog__painters {
+  width: calc(800 / 1600 * 100%);
+}
+
+.catalog__painter-image {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.catalog__painter-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: var(--semibold);
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.catalog__painter-years {
+  display: block;
+  font-weight: var(--regular);
+  font-size: 12px;
+  line-height: 38px;
+  word-spacing: unset;
+  color: var(--border-gray);
+}
+
+@media (max-width: 1280px) {
+
+  .catalog__info-painter-wrap,
+  .catalog__painters {
+    width: calc(437 / 925 * 100%);
+  }
+
+  .catalog__text {
+    width: 100%;
+  }
+
+  .catalog__painter-years {
+    margin-bottom: 8px;
+    line-height: 31px;
+  }
+
+}
+
+@media (max-width: 970px) {
+
+  .catalog__content-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .catalog__info-painter-wrap,
+  .catalog__painters {
+    width: 100%;
+  }
+
+  .catalog__painters {
+    margin-bottom: 83px;
+  }
+
+  .catalog__text {
+    margin-bottom: 19px;
+  }
+
+  .catalog__painter-image {
+    margin-bottom: 20px;
+  }
+
+  .catalog__painter-years {
+    margin-bottom: 0;
+  }
+
+}
+
+@media (max-width: 610px) {
+
+  .catalog {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  .catalog__text {
+    display: none;
+  }
+
+  .catalog__painters {
+    margin-bottom: 37px;
+  }
+
+  .catalog__painter-years {
+    margin-bottom: 7px;
+}
+
+  .catalog__painter-name-text {
+    margin-top: 0;
+    font-weight: var(--regular);
+    font-size: var(--dafault-fs);
+    line-height: var(--default-lh);
+  }
+
+}
