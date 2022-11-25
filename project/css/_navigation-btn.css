@@ -19,7 +19,7 @@
   background-color: var(--violet);
 }
 
-.navigation-btn:active {
+.navigation-btn:active:not(.navigation-btn_disabled) {
   background-color: var(--dark-violet);
 }
 
@@ -40,7 +40,7 @@
   box-shadow: inset 0 0 0 2px var(--violet);
 }
 
-.navigation-btn_light:active {
+.navigation-btn_light:active:not(.navigation-btn_disabled) {
   background-color: var(--violet-ultra-light);
   box-shadow: inset 0 0 0 2px var(--violet);
 }
@@ -48,7 +48,7 @@
 .navigation-btn::before {
   content: "";
   position: absolute;
-  top: calc(50% - 7px / 2);
+  top: calc(52% - 7px / 2);
   width: 7px;
   height: 7px;
   transform: rotate(45deg);
@@ -73,8 +73,8 @@
 }
 
 .navigation-btn_next::before {
-  top: calc(50% - 9px / 2);
-  left: calc(50% - 12px / 2);
+  top: calc(50% - 10px / 2);
+  left: calc(50% - 15px / 2);
   border-top: 1px solid var(--black);
   border-right: 1px solid var(--black);
 }
@@ -86,17 +86,16 @@
   border-bottom: 1px solid var(--black);
 }
 
-
 .navigation-btn_gallery-prev::before {
-  left: calc(59% - 7px / 2);
-  border-left: 1px solid var(--white);
-  border-bottom: 1px solid var(--white);
+  left: calc(56% - 7px / 2);
+  border-left: 1px solid var(--light-middle-gray);
+  border-bottom: 1px solid var(--light-middle-gray);
 }
 
 .navigation-btn_gallery-next::before {
   left: calc(45% - 7px / 2);
-  border-top: 1px solid var(--white);
-  border-right: 1px solid var(--white);
+  border-top: 1px solid var(--light-middle-gray);
+  border-right: 1px solid var(--light-middle-gray);
 }
 
 .navigation-btn_light::before {

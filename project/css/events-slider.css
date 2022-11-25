@@ -68,7 +68,7 @@
 }
 
 .events-slider__link,
-.link_text::after {
+.link_text_slider::after {
   transform: scaleX(1);
 }
 
@@ -76,7 +76,8 @@
   position: absolute;
   z-index: 12;
   top: 50%;
-  transition: opacity var(--short);
+  transition-property: background-color, color, opacity;
+  transition-duration: var(--short);
 }
 
 .events-slider__navigation-btn_prev {

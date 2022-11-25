@@ -1,15 +1,19 @@
+.showroom {
+  border: 1px solid var(--light-middle-gray);
+}
+
 .showroom__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 35px;
   padding-bottom: 28px;
-  border: 1px solid var(--light-middle-gray);
 }
 
 .showroom__content {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 
 .showroom__title {
@@ -26,6 +30,7 @@
 .showroom__form {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .showroom__input {
@@ -38,7 +43,8 @@
   border-radius: 100px;
   vertical-align: middle;
   color: var(--border-gray);
-  transition: background-color var(--short), color var(--dark);
+  transition-property: background-color, color;
+  transition-duration: var(--short);
 }
 
 .showroom__input:focus {
@@ -55,17 +61,57 @@
 }
 
 .showroom__btn {
+  position: relative;
   height: 50px;
   padding: 11px 35px;
   border: 2px solid var(--violet);
   border-radius: 100px;
+  color: var(--violet);
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: var(--short);
+}
+
+.showroom__btn:focus {
+  outline: none;
+}
+
+.showroom__btn:hover {
+
+  color: var(--white);
+  background-color: var(--violet);
+}
+
+.showroom__btn:active {
+  box-shadow: inset 0 0 0 3px var(--violet-ultra-light);
+  background-color: var(--dark-violet);
+}
+
+.showroom__btn::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  bottom: -7px;
+  left: -7px;
+  border: 2px solid var(--light-violet);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--short);
+}
+
+.showroom__btn:focus:not(:active):not(:hover)::after {
+  opacity: 1;
 }
 
 .showroom__btn-notmobile {
-  font-weight: var(--semibol);
+  display: flex;
+  font-weight: var(--bold);
   font-size: 18px;
   line-height: 25px;
-  color: var(--violet);
+  color: inherit;
+  transition: color var(--short);
 }
 
 .showroom__btn-mobile {
@@ -80,7 +126,6 @@
 }
 
 .showroom__map-wrapper {
-  max-width: 1920px;
   width: 100%;
   margin: 0 auto;
 }
@@ -95,14 +140,6 @@
   top: -30px;
   left: 20px;
 }
-
-/* .showroom__map {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-} */
 
 [class*="ground-pane"] {
   filter: grayscale(1);
@@ -143,6 +180,7 @@
 
   .showroom__form {
     margin-bottom: 30px;
+    gap: 25px;
   }
 
 }
@@ -153,6 +191,10 @@
     flex-direction: column;
   }
 
+  .showroom__input {
+    width: 290px;
+  }
+
   .showroom__btn-notmobile {
     display: none;
   }
@@ -160,7 +202,7 @@
   .showroom__btn {
     width: 128px;
     min-height: 40px;
-    padding: 17px 35px;
+    padding: 14px 33px;
   }
 
   .showroom__btn-mobile {
@@ -169,7 +211,7 @@
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    color: var(--violet);
+    color: inherit;
 
   }
 

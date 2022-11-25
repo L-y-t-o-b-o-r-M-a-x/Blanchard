@@ -122,11 +122,6 @@
   border-color: var(--dark-violet);
 }
 
-.accordion__content-wrap {
-  padding-top: 26px;
-  padding-bottom: 26px;
-}
-
 .accordion__inner-list {
   width: 91%;
   column-count: 3;
@@ -163,11 +158,72 @@
   padding: 41px 0 40px 24px;
 }
 
+.accordion__content-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 574px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.accordion__content-portrait {
+  max-width: 275px;
+  width: 100%;
+  min-height: 189px;
+  padding: 12px;
+  border: 2px solid var(--border-gray);
+}
+
+.accordion__content-img {
+  width: 100%;
+  height: 100%;
+  background-color: var(--border-gray);
+}
+
+.accordion__content-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 275px;
+  width: 100%;
+}
+
+.accordion__content-title {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: var(--semibold);
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.accordion__content-text {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
 @media (max-width: 1280px) {
 
   .accordion__inner-list {
     width: 116%;
     column-count: 2;
+  }
+
+  .accordion__content-wrap {
+    max-width: 421px;
+  }
+
+  .accordion__content-portrait {
+    max-width: 189px;
+    min-height: 130px;
+    padding: 8px;
+  }
+
+  .accordion__content-info {
+    max-width: 207px;
   }
 
 }
@@ -177,6 +233,20 @@
   .accordion__inner-list {
     width: 111%;
     column-count: 3;
+  }
+
+  .accordion__content-wrap {
+    max-width: 574px;
+  }
+
+  .accordion__content-portrait {
+    max-width: 275px;
+    min-height: 189px;
+    padding: 12px;
+  }
+
+  .accordion__content-info {
+    max-width: 275px;
   }
 
 }
@@ -192,11 +262,6 @@
     padding: 21px 64px 21px 0;
   }
 
-  .accordion__content-wrap {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
   .accordion__heading-text-wrap {
     font-size: 18px;
   }
@@ -206,6 +271,36 @@
     height: 30px;
   }
 
-  
+  .accordion__content-wrap {
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .accordion__content-portrait {
+    max-width: 130px;
+    min-height: 90px;
+    padding: 6px;
+  }
+
+  .accordion__content-info {
+    max-width: 174px;
+  }
+
+  .accordion__content-title {
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .accordion__content-info {
+    align-items: center;
+  }
+
+  .accordion__content-text {
+    text-align: center;
+  }
 
 }

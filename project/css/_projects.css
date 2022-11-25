@@ -12,6 +12,10 @@
   transition: color var(--short);
 }
 
+.projects__text-link:focus {
+  color: var(--white);
+}
+
 .projects__title {
   margin-top: 0;
   margin-bottom: 25px;
@@ -58,7 +62,6 @@
   }
 
   .projects__text {
-    max-width: 291px;
     margin-bottom: 17px;
     font-weight: var(--regular);
     font-size: var(--dafault-fs);
