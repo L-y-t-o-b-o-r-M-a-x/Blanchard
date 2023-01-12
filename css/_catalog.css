@@ -1,6 +1,7 @@
 .catalog {
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 40px;
+  padding-left: 140px;
 }
 
 .catalog__text {
@@ -55,6 +56,11 @@
 }
 
 @media (max-width: 1280px) {
+
+  .catalog {
+    padding-top: 80px;
+    padding-left: 0;
+  }
 
   .catalog__info-painter-wrap,
   .catalog__painters {

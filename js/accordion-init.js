@@ -1,3 +1,5 @@
 (() => {
-  new Accordion(".js-accordion-container");
+  new Accordion(".js-accordion-container", {
+    openOnInit: [0]
+  });
 })();

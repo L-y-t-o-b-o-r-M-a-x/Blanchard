@@ -12,7 +12,7 @@
   transition: color var(--short);
 }
 
-.projects__text-link:focus {
+.projects__text-link:focus:not(:hover) {
   color: var(--white);
 }
 

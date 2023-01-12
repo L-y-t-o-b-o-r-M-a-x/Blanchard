@@ -1,6 +1,6 @@
 .hero {
   padding-top: 60px;
-  padding-bottom: 123px;
+  padding-bottom: 132px;
 }
 
 .hero__content {
@@ -74,7 +74,7 @@
 @media (max-width: 1024px) {
   .hero {
     padding-top: 102px;
-    padding-bottom: 115px;
+    padding-bottom: 118px;
   }
 
   .hero__content {

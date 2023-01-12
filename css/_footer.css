@@ -1,5 +1,6 @@
 .footer {
-  padding: 50px 160px;
+  height: 140px;
+  padding: 45px 110px;
   background-color: var(--black);
 }
 
@@ -50,7 +51,7 @@
 
 @media (max-width: 1280px) {
   .footer {
-    padding: 50px;
+    padding: 40px 0;
   }
 
   .footer__items {
@@ -63,7 +64,7 @@
 @media (max-width: 610px) {
 
   .footer {
-    padding-top: 20px;
+    padding-top: 22px;
     padding-bottom: 20px;
   }
 
